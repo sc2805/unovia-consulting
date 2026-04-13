@@ -24,10 +24,16 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, function() {
-  console.log('');
-  console.log('  FreshCart Grocery App is running!');
-  console.log('  API:   http://localhost:' + PORT + '/api');
-  console.log('  App:   http://localhost:' + PORT);
-  console.log('');
-});
+// Only listen when running locally (not on Vercel)
+if (!process.env.VERCEL) {
+  app.listen(PORT, function() {
+    console.log('');
+    console.log('  FreshCart Grocery App is running!');
+    console.log('  API:   http://localhost:' + PORT + '/api');
+    console.log('  App:   http://localhost:' + PORT);
+    console.log('');
+  });
+}
+
+// Export for Vercel serverless
+module.exports = app;
