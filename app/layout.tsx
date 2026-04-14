@@ -16,8 +16,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Unovia Consulting — Strategic Financial & Business Advisory",
-    template: "%s | Unovia Consulting",
+    default: "UNoviA Consulting — Strategic Financial & Business Advisory",
+    template: "%s | UNoviA Consulting",
   },
   description:
     "Premium financial consultancy powered by expert CAs and MBAs, offering wealth management, tax planning, GST advisory, and business consulting from Kolkata, India.",

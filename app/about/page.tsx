@@ -163,9 +163,9 @@ export default function AboutPage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Coming Soon", role: "Managing Partner", initials: "UC" },
-              { name: "Coming Soon", role: "Head of Tax Practice", initials: "UC" },
-              { name: "Coming Soon", role: "Head of Wealth Management", initials: "UC" },
+              { name: "Principal Consultant", role: "Chartered Accountant (CA)", initials: "UN" },
+              { name: "Advisory Partner", role: "Business Strategist (MBA)", initials: "AC" },
+              { name: "Tax Lead", role: "GST & Tax Expert", initials: "UN" },
             ].map((member, index) => (
               <div
                 key={index}
