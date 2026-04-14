@@ -12,7 +12,7 @@ interface ContactFormData {
 
 export async function sendContactEmail(data: ContactFormData) {
   const apiKey = process.env.RESEND_API_KEY;
-  const contactEmail = process.env.CONTACT_EMAIL || "info@unoviaconsulting.com";
+  const contactEmail = process.env.CONTACT_EMAIL || "connect@unovia.in";
 
   // In development without API key, just log the email
   if (!apiKey) {
@@ -36,7 +36,7 @@ export async function sendContactEmail(data: ContactFormData) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Unovia Consulting <noreply@unoviaconsulting.com>",
+      from: "Unovia Consulting <noreply@unovia.in>",
       to: [contactEmail],
       subject: `New Inquiry: ${data.service} — ${data.name}`,
       html: `

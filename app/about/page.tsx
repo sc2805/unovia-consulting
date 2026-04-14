@@ -11,7 +11,7 @@ import { COMPANY, VALUES, TRUST_STATS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Unovia Consulting — our story, mission, values, and the team behind 15+ years of delivering premium financial advisory services.",
+    "Learn about Unovia Consulting — our story, mission, values, and the experienced team of CAs and MBAs delivering premium financial advisory from Kolkata.",
 };
 
 const iconMap = { Shield, Users, Award, Lightbulb };
@@ -54,15 +54,15 @@ export default function AboutPage() {
               />
               <div className="space-y-4 text-gray-500 leading-relaxed text-sm md:text-base">
                 <p>
-                  Unovia Consulting was founded with a clear purpose: to make expert financial
+                  Unovia Consulting was founded in {COMPANY.founded} in Kolkata with a clear purpose: to make expert financial
                   advisory accessible to businesses and individuals who deserve more than
                   one-size-fits-all solutions.
                 </p>
                 <p>
-                  Over the past {new Date().getFullYear() - parseInt(COMPANY.founded)} years, we&apos;ve grown from a
-                  boutique advisory firm into a comprehensive consultancy serving 500+ clients
-                  across wealth management, taxation, GST compliance, and strategic business
-                  consulting.
+                  Built by an experienced team of Chartered Accountants and MBAs, we bring deep
+                  domain expertise across wealth management, taxation, GST compliance, and strategic
+                  business consulting. Our team&apos;s combined experience spans some of India&apos;s
+                  top financial institutions and Big 4 firms.
                 </p>
                 <p>
                   What hasn&apos;t changed is our commitment to personalized service, deep
@@ -159,7 +159,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Leadership"
             title="Meet Our Team"
-            subtitle="Experienced professionals with decades of combined expertise in finance, tax, and business strategy."
+            subtitle="An experienced team of Chartered Accountants and MBAs bringing deep expertise in finance, tax, and business strategy."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -184,7 +184,7 @@ export default function AboutPage() {
 
       <CTABanner
         heading="Want to Work With Us?"
-        subtext="Join 500+ clients who trust Unovia for their financial and business advisory needs."
+        subtext="Join our growing list of clients who trust Unovia for their financial and business advisory needs."
       />
     </>
   );

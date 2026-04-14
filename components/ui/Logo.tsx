@@ -12,7 +12,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const USE_IMAGE_LOGO = false; // ← Flip to true when logo file is ready
+const USE_IMAGE_LOGO = true; // Logo file is now available at /public/logo.png
 const LOGO_PATH = "/logo.png"; // ← Update path if needed
 
 interface LogoProps {

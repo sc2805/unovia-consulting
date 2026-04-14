@@ -6,14 +6,14 @@ export const COMPANY = {
   name: "Unovia Consulting",
   tagline: "Strategic Advisory. Lasting Impact.",
   description:
-    "Premium financial and business consultancy delivering expert wealth management, tax planning, GST advisory, and strategic business consulting.",
+    "Premium financial and business consultancy powered by an experienced team of Chartered Accountants (CAs) and MBAs, delivering expert wealth management, tax planning, GST advisory, and strategic business consulting.",
   phone: "+91 98765 43210",
-  email: "info@unoviaconsulting.com",
-  address: "14th Floor, One Horizon Centre, Golf Course Road, Gurugram, Haryana 122002",
-  founded: "2009",
+  email: "connect@unovia.in",
+  address: "Kolkata, West Bengal, India",
+  founded: "2025",
   social: {
-    linkedin: "https://linkedin.com/company/unovia-consulting",
-    twitter: "https://twitter.com/unoviaconsulting",
+    linkedin: "https://www.linkedin.com/company/unovia-consulting",
+    twitter: "https://x.com/unoviaconsulting",
   },
 } as const;
 
@@ -125,9 +125,9 @@ export const SERVICES = [
 ] as const;
 
 export const TRUST_STATS = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 500, suffix: "+", label: "Clients Served" },
-  { value: 2000, suffix: "Cr+", label: "Assets Managed (₹)" },
+  { value: 10, suffix: "+", label: "Expert CAs & MBAs" },
+  { value: 100, suffix: "+", label: "Clients Served" },
+  { value: 500, suffix: "Cr+", label: "Assets Managed (₹)" },
   { value: 98, suffix: "%", label: "Client Retention" },
 ] as const;
 
@@ -232,7 +232,7 @@ export const VALUES = [
   },
   {
     title: "Deep Expertise",
-    description: "Our team brings decades of specialized experience across tax, finance, and business domains.",
+    description: "Our team of qualified CAs and MBAs brings specialized experience across tax, finance, and business domains.",
     icon: "Award",
   },
   {

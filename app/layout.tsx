@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Unovia Consulting",
   },
   description:
-    "Premium financial consultancy offering expert wealth management, tax planning, GST advisory, and business consulting. Trusted by 500+ clients since 2009.",
+    "Premium financial consultancy powered by expert CAs and MBAs, offering wealth management, tax planning, GST advisory, and business consulting from Kolkata, India.",
   keywords: [
     "wealth management",
     "tax consultancy",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
     "financial advisory",
     "tax planning India",
     "GST compliance",
-    "investment advisory",
+    "Kolkata financial advisory",
+    "CA firm Kolkata",
     "Unovia Consulting",
   ],
   authors: [{ name: "Unovia Consulting" }],
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Unovia Consulting",
     title: "Unovia Consulting — Strategic Financial & Business Advisory",
     description:
-      "Expert wealth management, tax planning, GST advisory, and business consulting. Trusted by 500+ clients since 2009.",
+      "Expert wealth management, tax planning, GST advisory, and business consulting by qualified CAs and MBAs.",
   },
   twitter: {
     card: "summary_large_image",

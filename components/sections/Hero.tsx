@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 animate-fade-in">
             <div className="w-1.5 h-1.5 bg-gold-500 rounded-full animate-pulse" />
             <span className="text-gold-400 text-xs font-semibold tracking-wide uppercase">
-              Trusted by 500+ Clients since 2009
+              Powered by Expert CAs &amp; MBAs
             </span>
           </div>
 
