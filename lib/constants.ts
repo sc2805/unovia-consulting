@@ -3,7 +3,7 @@
 // =============================================================================
 
 export const COMPANY = {
-  name: "Unovia Consulting",
+  name: "UNoviA Consulting",
   tagline: "Strategic Advisory. Lasting Impact.",
   description:
     "Premium financial and business consultancy powered by an experienced team of Chartered Accountants (CAs) and MBAs, delivering expert wealth management, tax planning, GST advisory, and strategic business consulting.",
