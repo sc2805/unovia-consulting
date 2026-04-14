@@ -1,0 +1,168 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, FileText, Shield, Briefcase } from "lucide-react";
+import Button from "@/components/ui/Button";
+import CTABanner from "@/components/sections/CTABanner";
+import { SERVICES } from "@/lib/constants";
+import { notFound } from "next/navigation";
+
+// =============================================================================
+// Service Detail Page — Dynamic route for each service
+// =============================================================================
+
+const iconMap = { TrendingUp, FileText, Shield, Briefcase };
+
+export async function generateStaticParams() {
+  return SERVICES.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
+  if (!service) return {};
+  return {
+    title: service.title,
+    description: service.description,
+  };
+}
+
+export default async function ServiceDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
+  if (!service) notFound();
+
+  const Icon = iconMap[service.icon as keyof typeof iconMap];
+  const serviceIndex = SERVICES.findIndex((s) => s.slug === slug);
+  const nextService = SERVICES[(serviceIndex + 1) % SERVICES.length];
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-50/50 to-white" />
+        <div className="relative container-tight px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-navy-800 transition-colors mb-6 group"
+          >
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            All Services
+          </Link>
+
+          <div className="flex flex-col md:flex-row md:items-start gap-6">
+            <div
+              className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0`}
+            >
+              <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+            </div>
+            <div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-800 leading-tight tracking-tight mb-4">
+                {service.title}
+              </h1>
+              <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
+                {service.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Offerings */}
+      <section className="section-padding bg-white pt-0">
+        <div className="container-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* What We Offer */}
+            <div className="lg:col-span-3">
+              <h2 className="text-2xl font-bold text-navy-800 mb-8">What We Offer</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {service.offerings.map((offering, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl hover:bg-navy-50 transition-colors duration-300"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 font-medium">{offering}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Sidebar CTA */}
+            <div className="lg:col-span-2">
+              <div className="p-8 bg-navy-800 rounded-2xl text-white sticky top-28">
+                <h3 className="text-lg font-bold mb-3">
+                  Need help with {service.title.toLowerCase()}?
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                  Schedule a free 30-minute consultation to discuss your specific requirements
+                  and how our team can help.
+                </p>
+                <Button
+                  href="/contact"
+                  variant="secondary"
+                  size="md"
+                  className="w-full justify-center"
+                >
+                  Book a Consultation
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="section-padding bg-gray-50/50">
+        <div className="container-tight">
+          <h2 className="text-2xl font-bold text-navy-800 mb-12 text-center">
+            Our Process
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {service.process.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-lg hover:border-gold-200 transition-all duration-300 h-full">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-navy-800 text-white text-sm font-bold mb-4">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-lg font-bold text-navy-800 mb-2">{step.step}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+                </div>
+                {/* Connector line */}
+                {index < service.process.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 border-t-2 border-dashed border-gray-200" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Next Service */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
+        <div className="container-tight">
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-gray-400">Explore More Services</span>
+            <Link
+              href={`/services/${nextService.slug}`}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy-700 hover:text-gold-600 transition-colors group"
+            >
+              {nextService.title}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <CTABanner />
+    </>
+  );
+}
