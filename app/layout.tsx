@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import "./globals.css";
 
 // =============================================================================
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     "CA firm Kolkata",
     "Unovia Consulting",
   ],
-  authors: [{ name: "Unovia Consulting" }],
+  authors: [{ name: "UNoviA Consulting" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

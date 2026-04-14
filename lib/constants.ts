@@ -7,7 +7,7 @@ export const COMPANY = {
   tagline: "Strategic Advisory. Lasting Impact.",
   description:
     "Premium financial and business consultancy powered by an experienced team of Chartered Accountants (CAs) and MBAs, delivering expert wealth management, tax planning, GST advisory, and strategic business consulting.",
-  phone: "+91 98765 43210",
+  phone: "+91 72786 71467",
   email: "connect@unovia.in",
   address: "Kolkata, West Bengal, India",
   founded: "2025",
