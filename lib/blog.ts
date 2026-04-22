@@ -44,7 +44,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "A comprehensive guide to the revised tax slabs, deductions, and strategic considerations for individuals and HUFs under the new income tax regime.",
     category: "Tax Planning",
-    date: "2024-03-15",
+    date: "2025-03-15",
     readTime: "8 min read",
     author: "Unovia Tax Team",
     content: `
@@ -100,7 +100,7 @@ The 2024 changes simplify the tax filing experience for most taxpayers. Consult 
     excerpt:
       "Ensure zero-error filing with our step-by-step checklist covering GSTR-9, GSTR-9C, reconciliation, and common pitfalls to avoid.",
     category: "GST Advisory",
-    date: "2024-02-28",
+    date: "2025-02-28",
     readTime: "6 min read",
     author: "Unovia GST Practice",
     content: `
@@ -156,7 +156,7 @@ A disciplined, proactive approach to GSTR-9 filing prevents costly errors and bu
     excerpt:
       "How high-net-worth investors can protect and grow wealth during market uncertainty using diversification, hedging, and alternative assets.",
     category: "Wealth Management",
-    date: "2024-02-10",
+    date: "2025-02-10",
     readTime: "7 min read",
     author: "Unovia Wealth Team",
     content: `
@@ -210,7 +210,7 @@ Wealth preservation in volatile markets is about discipline, diversification, an
     excerpt:
       "From product-market fit to operational scale — the key decisions founders and CEOs need to make when growing from ₹10Cr to ₹100Cr revenue.",
     category: "Business Strategy",
-    date: "2024-01-22",
+    date: "2025-01-22",
     readTime: "10 min read",
     author: "Unovia Business Advisory",
     content: `
@@ -274,7 +274,7 @@ Scaling is a systematic process. Build the foundation, hire ahead, and execute w
     excerpt:
       "A practical guide for Non-Resident Indians on tax obligations, DTAA benefits, TDS recovery, and repatriation rules for Indian income and assets.",
     category: "Tax Planning",
-    date: "2024-01-08",
+    date: "2025-01-08",
     readTime: "9 min read",
     author: "Unovia Tax Team",
     content: `
@@ -342,7 +342,7 @@ NRI taxation is nuanced and country-specific. Proactive planning — especially 
     excerpt:
       "Businesses leave money on the table due to ITC errors. Learn how to reconcile, claim, and optimize your input tax credit under GST.",
     category: "GST Advisory",
-    date: "2023-12-18",
+    date: "2025-12-18",
     readTime: "5 min read",
     author: "Unovia GST Practice",
     content: `
