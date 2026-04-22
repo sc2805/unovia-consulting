@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowUpRight, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { COMPANY, NAV_LINKS, SERVICES } from "@/lib/constants";
 
@@ -54,13 +54,13 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href={COMPANY.social.twitter}
+                href={COMPANY.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gray-400 hover:bg-gold-500 hover:text-navy-900 transition-all duration-300"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>

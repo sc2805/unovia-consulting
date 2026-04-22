@@ -13,7 +13,7 @@ export const COMPANY = {
   founded: "2025",
   social: {
     linkedin: "https://www.linkedin.com/in/unovia-consulting/",
-    twitter: "https://x.com/unoviaconsulting",
+    instagram: "https://www.instagram.com/unoviaconsulting",
   },
 } as const;
 
