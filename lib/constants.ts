@@ -126,8 +126,6 @@ export const SERVICES = [
 
 export const TRUST_STATS = [
   { value: 10, suffix: "+", label: "Expert CAs & MBAs" },
-  { value: 100, suffix: "+", label: "Clients Served" },
-  { value: 500, suffix: "Cr+", label: "Assets Managed (₹)" },
   { value: 98, suffix: "%", label: "Client Retention" },
 ] as const;
 

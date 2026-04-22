@@ -33,10 +33,10 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 animate-fade-in" style={{ marginTop: "2mm" }}>
             <div className="w-1.5 h-1.5 bg-gold-500 rounded-full animate-pulse" />
             <span className="text-gold-400 text-xs font-semibold tracking-wide uppercase">
-              Powered by Expert CAs &amp; MBAs
+              Powered by Expert CA<span style={{ fontSize: "0.7em" }}>s</span> &amp; MBA<span style={{ fontSize: "0.7em" }}>s</span>
             </span>
           </div>
 

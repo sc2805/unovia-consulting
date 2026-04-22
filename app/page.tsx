@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TrustIndicators from "@/components/sections/TrustIndicators";
-import Testimonials from "@/components/sections/Testimonials";
+
 import InsightsPreview from "@/components/sections/InsightsPreview";
 import CTABanner from "@/components/sections/CTABanner";
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Hero />
       <ServicesGrid />
       <TrustIndicators />
-      <Testimonials />
+
       <InsightsPreview />
       <CTABanner />
     </>
