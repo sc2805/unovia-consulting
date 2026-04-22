@@ -69,7 +69,7 @@ export default function DailyBriefPage() {
                   </Link>
                   
                   <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
-                    {article.contentSnippet}
+                    {article.excerpt}
                   </p>
                   
                   <Link 

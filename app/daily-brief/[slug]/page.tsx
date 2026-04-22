@@ -8,6 +8,12 @@ interface PageProps {
   params: { slug: string };
 }
 
+export async function generateStaticParams() {
+  return dailyNews.articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const article = dailyNews.articles.find((a) => a.slug === params.slug);
   if (!article) return { title: "Article Not Found" };
