@@ -12,7 +12,7 @@ export const COMPANY = {
   address: "Kolkata, West Bengal, India",
   founded: "2025",
   social: {
-    linkedin: "https://www.linkedin.com/company/unovia-consulting",
+    linkedin: "https://www.linkedin.com/in/unovia-consulting/",
     twitter: "https://x.com/unoviaconsulting",
   },
 } as const;
