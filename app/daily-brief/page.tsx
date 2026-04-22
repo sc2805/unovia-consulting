@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Newspaper, ExternalLink, Calendar, RefreshCw } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import dailyNews from "@/lib/daily-news.json";
@@ -61,23 +62,23 @@ export default function DailyBriefPage() {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-navy-800 mb-3 group-hover:text-gold-600 transition-colors leading-snug">
-                    {article.title}
-                  </h3>
+                  <Link href={`/daily-brief/${article.slug}`}>
+                    <h3 className="text-xl font-bold text-navy-800 mb-3 group-hover:text-gold-600 transition-colors leading-snug">
+                      {article.title}
+                    </h3>
+                  </Link>
                   
                   <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
                     {article.contentSnippet}
                   </p>
                   
-                  <a 
-                    href={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    href={`/daily-brief/${article.slug}`}
                     className="inline-flex items-center gap-1.5 text-sm font-bold text-navy-800 hover:text-gold-600 transition-colors"
                   >
-                    Read full article
+                    Read article
                     <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </div>
                 
                 {/* Visual accent */}
