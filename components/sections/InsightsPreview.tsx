@@ -16,8 +16,8 @@ export default function InsightsPreview() {
       <div className="container-tight">
         <SectionHeading
           eyebrow="Latest Insights"
-          title="Expert Analysis & Market Commentary"
-          subtitle="Stay informed with our latest thinking on tax, finance, and business strategy."
+          title="Insights That Empower Better Financial Decisions"
+          subtitle="Expert perspectives on taxation, investments, wealth creation, business finance, and economic trends to help you navigate an evolving financial landscape with confidence."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
@@ -82,7 +82,7 @@ export default function InsightsPreview() {
             href="/insights"
             className="inline-flex items-center gap-2 text-sm font-semibold text-navy-700 hover:text-gold-600 transition-colors group"
           >
-            View All Insights
+            Explore All Insights
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
