@@ -11,14 +11,27 @@ export default function InvestmentCalculator() {
   const [lumpsumInvestment, setLumpsumInvestment] = useState<number>(100000);
   const [expectedReturn, setExpectedReturn] = useState<number>(12);
   const [timePeriod, setTimePeriod] = useState<number>(10);
+  const [stepUp, setStepUp] = useState<number>(0);
 
   const calculateResults = () => {
     if (mode === "SIP") {
-      const p = monthlyInvestment;
+      let currentSip = monthlyInvestment;
+      let invested = 0;
+      let totalValue = 0;
       const r = expectedReturn / 12 / 100;
-      const n = timePeriod * 12;
-      const invested = p * n;
-      const totalValue = Math.round(p * (((Math.pow(1 + r, n) - 1) / r) * (1 + r)));
+      const months = timePeriod * 12;
+
+      for (let month = 1; month <= months; month++) {
+        invested += currentSip;
+        totalValue = (totalValue + currentSip) * (1 + r);
+        
+        if (month % 12 === 0 && stepUp > 0) {
+          currentSip += currentSip * (stepUp / 100);
+        }
+      }
+      
+      totalValue = Math.round(totalValue);
+      invested = Math.round(invested);
       const wealthGained = totalValue - invested;
       return { invested, wealthGained, totalValue };
     } else {
@@ -38,6 +51,7 @@ export default function InvestmentCalculator() {
     lumpsumInvestment,
     expectedReturn,
     timePeriod,
+    stepUp,
   ]);
 
   const formatCurrency = (val: number) => {
@@ -174,6 +188,35 @@ export default function InvestmentCalculator() {
               className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold-500"
             />
           </div>
+
+          {/* Annual Step Up (Only for SIP) */}
+          {mode === "SIP" && (
+            <div>
+              <div className="flex justify-between items-end mb-4">
+                <label className="text-sm font-semibold text-gray-700">
+                  Annual Step Up
+                </label>
+                <div className="relative">
+                  <input
+                    type="number"
+                    value={stepUp}
+                    onChange={(e) => setStepUp(Number(e.target.value))}
+                    className="w-24 pr-8 py-1.5 text-right font-semibold text-navy-800 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500/50"
+                  />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 font-medium">%</span>
+                </div>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={50}
+                step={1}
+                value={stepUp}
+                onChange={(e) => setStepUp(Number(e.target.value))}
+                className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold-500"
+              />
+            </div>
+          )}
         </div>
       </div>
 
