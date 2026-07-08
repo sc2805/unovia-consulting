@@ -146,6 +146,31 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
+      {/* Calculator Promo (Only on Wealth Management) */}
+      {slug === "wealth-management" && (
+        <section className="py-12 bg-white">
+          <div className="container-tight">
+            <div className="bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+              <div className="max-w-xl">
+                <h3 className="text-2xl font-bold mb-4">Plan Your Financial Future</h3>
+                <p className="text-gray-300 leading-relaxed mb-0">
+                  See the power of compounding in action. Use our SIP & Lumpsum Calculator to estimate the future value of your investments and build a robust wealth creation strategy.
+                </p>
+              </div>
+              <Button
+                href="/calculators/sip-lumpsum"
+                variant="primary"
+                size="md"
+                className="bg-gold-500 hover:bg-gold-600 text-navy-900 w-full md:w-auto justify-center flex-shrink-0 border-none"
+              >
+                Try the Calculator
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Next Service */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
         <div className="container-tight">
