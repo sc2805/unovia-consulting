@@ -28,6 +28,9 @@ export async function sendContactEmail(data: ContactFormData) {
     return { success: true, id: "dev-mode" };
   }
 
+  // Use a verified domain or Resend's testing email
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+
   // Send via Resend API
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -36,7 +39,7 @@ export async function sendContactEmail(data: ContactFormData) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Unovia Consulting <noreply@unovia.in>",
+      from: `Unovia Consulting <${fromEmail}>`,
       to: [contactEmail],
       subject: `New Inquiry: ${data.service} — ${data.name}`,
       html: `
