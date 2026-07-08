@@ -207,13 +207,94 @@ export const TESTIMONIALS = [
 
 export const INSIGHTS = [
   {
+    slug: "wealth-creation-discipline-over-returns",
+    title: "Why Wealth Creation Is More About Discipline Than Returns",
+    excerpt:
+      "Discover why consistent investing habits matter more than chasing high returns, and how SIP discipline can build life-changing wealth over time.",
+    category: "Investment & Wealth",
+    date: "2025-06-15",
+    readTime: "7 min read",
+  },
+  {
+    slug: "tax-planning-start-april-not-march",
+    title: "Tax Planning Should Start in April, Not March",
+    excerpt:
+      "Why last-minute tax planning costs you money, and a practical month-by-month calendar to optimize your tax position throughout the year.",
+    category: "Tax Planning",
+    date: "2025-06-01",
+    readTime: "6 min read",
+  },
+  {
+    slug: "asset-allocation-foundation-investing",
+    title: "Asset Allocation: The Foundation of Successful Investing",
+    excerpt:
+      "How to build an optimal equity-debt-gold-real estate mix for your age, risk appetite, and financial goals — and why allocation matters more than stock picking.",
+    category: "Investment & Wealth",
+    date: "2025-05-20",
+    readTime: "8 min read",
+  },
+  {
+    slug: "understanding-capital-gains-tax-india",
+    title: "Understanding Capital Gains Tax in India",
+    excerpt:
+      "A complete guide to STCG and LTCG rates, indexation benefits, and exemptions under Section 54/54EC/54F — with practical examples for investors.",
+    category: "Tax Planning",
+    date: "2025-05-05",
+    readTime: "9 min read",
+  },
+  {
+    slug: "inflation-impact-financial-goals",
+    title: "How Inflation Impacts Your Long-Term Financial Goals",
+    excerpt:
+      "Understanding how inflation erodes purchasing power and what it means for your retirement, education, and housing goals — with strategies to stay ahead.",
+    category: "Economy & Markets",
+    date: "2025-04-25",
+    readTime: "6 min read",
+  },
+  {
+    slug: "financial-mistakes-young-professionals",
+    title: "Financial Mistakes Young Professionals Should Avoid",
+    excerpt:
+      "Six costly financial mistakes that young earners make — from delaying SIPs to ignoring health insurance — and how to course-correct early.",
+    category: "Investment & Wealth",
+    date: "2025-04-10",
+    readTime: "7 min read",
+  },
+  {
+    slug: "retirement-corpus-practical-roadmap",
+    title: "Building a Retirement Corpus: A Practical Roadmap",
+    excerpt:
+      "A step-by-step guide to calculating your retirement number, choosing the right instruments, and building a corpus that sustains your lifestyle.",
+    category: "Investment & Wealth",
+    date: "2025-03-28",
+    readTime: "8 min read",
+  },
+  {
     slug: "understanding-new-tax-regime-2024",
     title: "Understanding the New Tax Regime: What Changed in 2024",
     excerpt:
       "A comprehensive guide to the revised tax slabs, deductions, and strategic considerations for individuals and HUFs under the new income tax regime.",
     category: "Tax Planning",
-    date: "2024-03-15",
+    date: "2025-03-15",
     readTime: "8 min read",
+  },
+  {
+    slug: "economic-trends-indian-investors",
+    title: "Economic Trends Every Indian Investor Should Watch",
+    excerpt:
+      "Eight key economic indicators — from GDP growth to FII flows — that every investor should track to make smarter financial decisions.",
+    category: "Economy & Markets",
+    date: "2025-03-15",
+    readTime: "7 min read",
+  },
+  {
+    slug: "more-investments-not-better-diversification",
+    title: "More Investments Do Not Mean Better Diversification",
+    excerpt:
+      "Why holding 15 mutual funds isn't diversification — it's diworsification. Learn how to audit your portfolio and achieve true diversification.",
+    category: "Investment & Wealth",
+    date: "2025-03-01",
+    readTime: "6 min read",
   },
   {
     slug: "gst-annual-return-filing-checklist",
@@ -221,8 +302,17 @@ export const INSIGHTS = [
     excerpt:
       "Ensure zero-error filing with our step-by-step checklist covering GSTR-9, GSTR-9C, reconciliation, and common pitfalls to avoid.",
     category: "GST Advisory",
-    date: "2024-02-28",
+    date: "2025-02-28",
     readTime: "6 min read",
+  },
+  {
+    slug: "financial-plan-through-market-cycles",
+    title: "Creating a Financial Plan That Works Through Market Cycles",
+    excerpt:
+      "How to build a financial plan anchored in asset allocation and discipline that delivers results whether markets are booming or crashing.",
+    category: "Investment & Wealth",
+    date: "2025-02-15",
+    readTime: "8 min read",
   },
   {
     slug: "wealth-preservation-volatile-markets",
@@ -230,7 +320,7 @@ export const INSIGHTS = [
     excerpt:
       "How high-net-worth investors can protect and grow wealth during market uncertainty using diversification, hedging, and alternative assets.",
     category: "Wealth Management",
-    date: "2024-02-10",
+    date: "2025-02-10",
     readTime: "7 min read",
   },
   {
@@ -239,7 +329,7 @@ export const INSIGHTS = [
     excerpt:
       "From product-market fit to operational scale — the key decisions founders and CEOs need to make when growing from ₹10Cr to ₹100Cr revenue.",
     category: "Business Strategy",
-    date: "2024-01-22",
+    date: "2025-01-22",
     readTime: "10 min read",
   },
   {
@@ -248,7 +338,7 @@ export const INSIGHTS = [
     excerpt:
       "A practical guide for Non-Resident Indians on tax obligations, DTAA benefits, TDS recovery, and repatriation rules for Indian income and assets.",
     category: "Tax Planning",
-    date: "2024-01-08",
+    date: "2025-01-08",
     readTime: "9 min read",
   },
   {
@@ -257,7 +347,7 @@ export const INSIGHTS = [
     excerpt:
       "Businesses leave money on the table due to ITC errors. Learn how to reconcile, claim, and optimize your input tax credit under GST.",
     category: "GST Advisory",
-    date: "2023-12-18",
+    date: "2025-12-18",
     readTime: "5 min read",
   },
 ] as const;

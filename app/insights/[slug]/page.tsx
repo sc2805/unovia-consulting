@@ -40,6 +40,9 @@ const categoryColors: Record<string, string> = {
   "GST Advisory": "bg-amber-50 text-amber-700 border-amber-200",
   "Wealth Management": "bg-blue-50 text-blue-700 border-blue-200",
   "Business Strategy": "bg-violet-50 text-violet-700 border-violet-200",
+  "Investment & Wealth": "bg-blue-50 text-blue-700 border-blue-200",
+  "Economy & Markets": "bg-rose-50 text-rose-700 border-rose-200",
+  "Business Finance": "bg-violet-50 text-violet-700 border-violet-200",
 };
 
 const categoryAccent: Record<string, string> = {
@@ -47,6 +50,9 @@ const categoryAccent: Record<string, string> = {
   "GST Advisory": "from-amber-500 to-orange-600",
   "Wealth Management": "from-blue-500 to-indigo-600",
   "Business Strategy": "from-violet-500 to-purple-600",
+  "Investment & Wealth": "from-blue-500 to-indigo-600",
+  "Economy & Markets": "from-rose-500 to-pink-600",
+  "Business Finance": "from-violet-500 to-purple-600",
 };
 
 // =============================================================================
