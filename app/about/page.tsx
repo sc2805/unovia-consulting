@@ -92,7 +92,7 @@ const EXPERTISE_AREAS = [
     icon: Scale,
     title: "Regulatory Compliance",
     description:
-      "End-to-end compliance management across GST, Company Law, FEMA, and other regulatory frameworks — so you can focus on growth while we handle the complexity.",
+      "End-to-end compliance management across GST, Company Law, and other regulatory frameworks — so you can focus on growth while we handle the complexity.",
     color: "from-cyan-500 to-blue-600",
   },
 ];
