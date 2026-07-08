@@ -133,31 +133,75 @@ export const TRUST_STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Unovia transformed our tax strategy completely. We reduced our effective tax rate by 18% in the first year — all within full compliance. Their expertise is unmatched.",
-    name: "Rajesh Kapoor",
-    title: "Managing Director",
-    company: "Kapoor Industries Pvt. Ltd.",
+      "Working with Unovia completely transformed how I approach my finances. As a marketing professional managing multiple income streams, I was always confused about tax-saving options beyond the basics. Unovia's team built a personalized tax plan that saved me over ₹1.8 lakhs in the first year alone. They also helped me start a disciplined SIP strategy aligned with my five-year goals. What I appreciate most is their transparency — every recommendation comes with clear reasoning, never a sales pitch. Unovia has made financial planning feel accessible and empowering.",
+    name: "Ankit Burnwal",
+    title: "Marketing Professional",
+    company: "KreditBee",
+    rating: 5,
+    services: ["Tax Planning", "Personal Financial Planning"],
   },
   {
     quote:
-      "The wealth management team at Unovia gave us the confidence to plan long-term. Our portfolio has consistently outperformed benchmarks while keeping risk in check.",
+      "Before Unovia, I had savings scattered across random FDs and a couple of mutual funds I barely understood. Their team sat down with me, mapped out my financial goals — buying a home, building an emergency fund, early retirement planning — and created a structured investment roadmap. Within 18 months, my portfolio has grown meaningfully, and more importantly, I finally feel in control. The quarterly reviews are incredibly detailed, and they proactively adjust my strategy based on market conditions and tax implications. Unovia treats me like a priority, not just another client.",
+    name: "Rahul Sharma",
+    title: "Software Engineer",
+    company: "Bengaluru",
+    rating: 5,
+    services: ["Investment Strategy", "Wealth Management"],
+  },
+  {
+    quote:
+      "As an entrepreneur running a D2C brand, I was so focused on revenue that I completely neglected my personal wealth. Unovia helped me separate my business and personal finances, set up a proper tax structure, and start building long-term wealth outside the business. Their CFO advisory has been a game-changer for our financial reporting — investors now get clean, professional MIS reports every month. They genuinely understand the startup mindset and tailor their advice accordingly. I consider Unovia an extension of my founding team.",
     name: "Priya Mehta",
-    title: "Family Office Principal",
-    company: "Mehta Family Trust",
+    title: "Founder & CEO",
+    company: "D2C Lifestyle Brand, Mumbai",
+    rating: 5,
+    services: ["Business Consulting", "Financial Reporting"],
   },
   {
     quote:
-      "When GST compliance became overwhelming, Unovia stepped in and streamlined everything. From filing to ITC optimization, they handle it all seamlessly.",
-    name: "Arjun Sethi",
-    title: "CEO & Founder",
-    company: "NovaTech Solutions",
+      "Running a manufacturing unit in Kolkata means dealing with complex GST filings, TDS obligations, and constantly evolving compliance requirements. Unovia took over our entire tax and compliance function and brought order to what was previously chaos. They identified ₹12 lakhs in unclaimed input tax credits we had missed, streamlined our return filing process, and ensured we are always audit-ready. Their team is responsive, thorough, and deeply knowledgeable. For any business owner drowning in compliance, Unovia is the partner you need.",
+    name: "Vikram Singh",
+    title: "Managing Director",
+    company: "Singh Manufacturing Pvt. Ltd., Kolkata",
+    rating: 5,
+    services: ["Tax Planning", "Compliance Advisory"],
   },
   {
     quote:
-      "Their business consulting helped us navigate a complex acquisition. The due diligence was thorough, the advice was sharp, and the outcome exceeded expectations.",
-    name: "Sneha Agarwal",
-    title: "CFO",
-    company: "Green Valley Exports",
+      "At my level, financial decisions have significant long-term implications — stock options, deferred compensation, retirement corpus, real estate investments. I needed an advisor who could see the complete picture and optimize across all these dimensions. Unovia delivered exactly that. They restructured my investment portfolio to be far more tax-efficient, helped me exercise my ESOPs at the right time, and built a comprehensive retirement plan that gives me genuine peace of mind. Their professionalism and depth of expertise are on par with the best advisory firms I have encountered.",
+    name: "Neha Gupta",
+    title: "Senior Vice President",
+    company: "Leading Financial Services Firm, Mumbai",
+    rating: 5,
+    services: ["Wealth Management", "Retirement Planning"],
+  },
+  {
+    quote:
+      "Managing investments in India while living abroad is incredibly complex — DTAA provisions, TDS recovery, FEMA compliance, rental income taxation. I tried managing it myself for years and lost money to inefficiencies. Unovia's NRI advisory team has been exceptional. They consolidated my India portfolio, optimized my tax position across both jurisdictions, handled all my ITR filings remotely, and even assisted with repatriation planning. The entire experience has been seamless, professional, and genuinely reassuring. I finally have a trusted team on the ground managing my Indian finances.",
+    name: "Rajesh Patel",
+    title: "NRI Investor",
+    company: "Dubai, UAE",
+    rating: 5,
+    services: ["Tax Planning", "Investment Strategy"],
+  },
+  {
+    quote:
+      "When our family business transitioned to the next generation, we realized we had no structured wealth management plan. Unovia stepped in and created a comprehensive family financial blueprint — covering everything from succession planning and estate structuring to education funds for our grandchildren and a diversified investment portfolio. They treat our family's wealth with the same care and diligence as their own. What sets them apart is their patience in explaining complex strategies in simple terms and their unwavering commitment to our long-term financial well-being.",
+    name: "The Agarwal Family",
+    title: "Wealth Management Clients",
+    company: "Kolkata",
+    rating: 5,
+    services: ["Wealth Management", "Personal Financial Planning"],
+  },
+  {
+    quote:
+      "With both of us nearing retirement, we were anxious about whether our savings would sustain our lifestyle for the next 25–30 years. Unovia conducted a thorough retirement readiness assessment and the results were eye-opening. They restructured our corpus into a balanced mix of growth and income-generating assets, optimized our tax outgo on pension and interest income, and set up a systematic withdrawal plan. For the first time in years, we feel genuinely confident about our financial future. Unovia has given us the retirement we always envisioned — stress-free and secure.",
+    name: "The Mehta Family",
+    title: "Retirement Planning Clients",
+    company: "Pune",
+    rating: 5,
+    services: ["Retirement Planning", "Tax Planning"],
   },
 ] as const;
 
