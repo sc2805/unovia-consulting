@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TrendingUp, FileText, Shield, Briefcase, ArrowRight } from "lucide-react";
+import { TrendingUp, FileText, Shield, Briefcase, Stamp, ArrowRight } from "lucide-react";
 
 // =============================================================================
 // ServiceCard — Interactive card linking to individual service pages
@@ -10,6 +10,7 @@ const iconMap = {
   FileText,
   Shield,
   Briefcase,
+  Stamp,
 } as const;
 
 interface ServiceCardProps {

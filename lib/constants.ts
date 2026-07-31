@@ -124,6 +124,30 @@ export const SERVICES = [
       { step: "Scale", desc: "Sustain momentum with ongoing advisory and performance tracking." },
     ],
   },
+  {
+    slug: "trademark-copyright",
+    title: "Trademark & Copyright Registration",
+    shortDescription:
+      "Protect your brand identity and creative works with end-to-end trademark and copyright registration services across India.",
+    description:
+      "Your brand is one of your most valuable business assets. Our Intellectual Property practice helps entrepreneurs, startups, and established businesses secure their brand names, logos, taglines, and creative works through comprehensive trademark and copyright registration. From initial search and filing to objection handling and renewal, we manage the entire lifecycle of your IP protection so you can focus on building your business with confidence.",
+    icon: "Stamp",
+    color: "from-rose-500 to-pink-600",
+    offerings: [
+      "Trademark Search & Availability Analysis",
+      "Trademark Registration (All 45 Classes)",
+      "Logo & Brand Name Protection",
+      "Copyright Registration for Creative Works",
+      "Trademark Objection & Opposition Handling",
+      "Trademark Renewal & Portfolio Management",
+    ],
+    process: [
+      { step: "Search", desc: "Comprehensive trademark search to ensure your brand name or logo is available for registration." },
+      { step: "Filing", desc: "Prepare and file your trademark/copyright application with the Indian IP Office." },
+      { step: "Prosecution", desc: "Handle examination reports, objections, and oppositions on your behalf." },
+      { step: "Protection", desc: "Secure your registration certificate and manage renewals to maintain lifelong brand protection." },
+    ],
+  },
 ] as const;
 
 export const TRUST_STATS = [
