@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "graphify-ts": "^0.2.0",
     "lucide-react": "^0.370.0",
     "next": "^14.2.0",
