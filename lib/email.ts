@@ -7,6 +7,8 @@ interface ContactFormData {
   email: string;
   phone: string;
   service: string;
+  preferredDate?: string;
+  preferredTime?: string;
   message: string;
 }
 
@@ -14,16 +16,18 @@ export async function sendContactEmail(data: ContactFormData) {
   const apiKey = process.env.RESEND_API_KEY;
   const contactEmail = process.env.CONTACT_EMAIL || "connect@unovia.in";
 
-  // In development without API key, just log the email
+  // In development or when API key is missing, log submission cleanly
   if (!apiKey) {
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    console.log("📧 Contact Form Submission (dev mode)");
+    console.log("📧 Contact Form Submission (dev/no-key mode)");
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    console.log(`Name:    ${data.name}`);
-    console.log(`Email:   ${data.email}`);
-    console.log(`Phone:   ${data.phone}`);
-    console.log(`Service: ${data.service}`);
-    console.log(`Message: ${data.message}`);
+    console.log(`Name:           ${data.name}`);
+    console.log(`Email:          ${data.email}`);
+    console.log(`Phone:          ${data.phone}`);
+    console.log(`Service:        ${data.service}`);
+    console.log(`Preferred Date: ${data.preferredDate || "N/A"}`);
+    console.log(`Preferred Time: ${data.preferredTime || "N/A"}`);
+    console.log(`Message:        ${data.message}`);
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
     return { success: true, id: "dev-mode" };
   }
@@ -41,21 +45,22 @@ export async function sendContactEmail(data: ContactFormData) {
     body: JSON.stringify({
       from: `Unovia Consulting <${fromEmail}>`,
       to: [contactEmail],
+      reply_to: data.email,
       subject: `New Inquiry: ${data.service} — ${data.name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
           <div style="background: #0F2B5B; padding: 24px; border-radius: 8px 8px 0 0;">
             <h1 style="color: #C5A55A; margin: 0; font-size: 20px;">New Consultation Request</h1>
           </div>
           <div style="background: #ffffff; padding: 24px; border: 1px solid #e5e7eb;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 8px 0; color: #6b7280; width: 120px;">Name</td>
+                <td style="padding: 8px 0; color: #6b7280; width: 140px;">Name</td>
                 <td style="padding: 8px 0; font-weight: 600;">${data.name}</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;">Email</td>
-                <td style="padding: 8px 0;"><a href="mailto:${data.email}">${data.email}</a></td>
+                <td style="padding: 8px 0;"><a href="mailto:${data.email}" style="color: #0F2B5B;">${data.email}</a></td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;">Phone</td>
@@ -63,12 +68,22 @@ export async function sendContactEmail(data: ContactFormData) {
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;">Service</td>
-                <td style="padding: 8px 0;">${data.service}</td>
+                <td style="padding: 8px 0; font-weight: 600; color: #0F2B5B;">${data.service}</td>
               </tr>
+              ${
+                data.preferredDate || data.preferredTime
+                  ? `
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280;">Preferred Time</td>
+                <td style="padding: 8px 0;">${data.preferredDate || "Any date"} at ${data.preferredTime || "Any time"} (IST)</td>
+              </tr>
+              `
+                  : ""
+              }
             </table>
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 16px 0;" />
-            <p style="color: #6b7280; margin: 0 0 8px;">Message:</p>
-            <p style="margin: 0; line-height: 1.6;">${data.message}</p>
+            <p style="color: #6b7280; margin: 0 0 8px; font-weight: 600;">Message:</p>
+            <p style="margin: 0; line-height: 1.6; white-space: pre-wrap;">${data.message}</p>
           </div>
           <div style="background: #f9fafb; padding: 16px 24px; border-radius: 0 0 8px 8px; border: 1px solid #e5e7eb; border-top: none;">
             <p style="margin: 0; font-size: 12px; color: #9ca3af;">Sent from Unovia Consulting website contact form</p>
@@ -79,8 +94,9 @@ export async function sendContactEmail(data: ContactFormData) {
   });
 
   if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.message || "Failed to send email");
+    const errorData = await response.json().catch(() => ({ message: "Failed to parse error response" }));
+    console.error("Resend API Email Delivery Error:", errorData);
+    throw new Error(errorData.message || `Resend API error (${response.status})`);
   }
 
   return await response.json();

@@ -9,12 +9,12 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone, service, preferredDate, preferredTime, message } = body;
 
     // Validate required fields
     if (!name || !email || !phone || !service || !message) {
       return NextResponse.json(
-        { error: "All fields are required." },
+        { error: "All required fields (Name, Email, Phone, Service, Message) must be filled." },
         { status: 400 }
       );
     }
@@ -29,7 +29,15 @@ export async function POST(req: NextRequest) {
     }
 
     // Send the email
-    const result = await sendContactEmail({ name, email, phone, service, message });
+    const result = await sendContactEmail({
+      name,
+      email,
+      phone,
+      service,
+      preferredDate,
+      preferredTime,
+      message,
+    });
 
     return NextResponse.json(
       { message: "Your message has been sent successfully!", id: result.id },
@@ -37,8 +45,9 @@ export async function POST(req: NextRequest) {
     );
   } catch (error: unknown) {
     console.error("Contact form error:", error);
+    const errorMessage = error instanceof Error ? error.message : "Failed to send message.";
     return NextResponse.json(
-      { error: "Failed to send message. Please try again later." },
+      { error: errorMessage },
       { status: 500 }
     );
   }
