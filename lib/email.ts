@@ -32,8 +32,8 @@ export async function sendContactEmail(data: ContactFormData) {
     return { success: true, id: "dev-mode" };
   }
 
-  // Use a verified domain or Resend's testing email
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+  // Use a verified domain or fallback to unovia.in sender
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@unovia.in";
 
   // Send via Resend API
   const response = await fetch("https://api.resend.com/emails", {
