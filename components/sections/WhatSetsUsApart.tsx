@@ -8,9 +8,9 @@ export const DIFFERENTIATORS = [
     badge: "CA-Led Advisory",
     icon: Award,
     description:
-      "Each practice area—Wealth Management, Tax Consultancy, GST Advisory, and Business Consulting—is backed by a 7+ year proven track record serving multiple individual and corporate clients.",
+      "Each practice area—Wealth Management, Tax Consultancy, GST Advisory, and Business Consulting—is backed by a 7+ year proven track record serving individual and corporate clients.",
     highlights: [
-      "7+ years proven track record serving multiple clients",
+      "7+ years proven track record serving diverse clients",
       "Institutional-grade financial & regulatory rigour",
       "Proactive monitoring of legislative tax changes",
       "Zero-compromise accuracy and compliance standards",
@@ -52,7 +52,7 @@ export const DIFFERENTIATORS = [
     description:
       "We measure our performance by the tangible wealth created and tax optimized for our clients over long-term multi-generational partnerships.",
     highlights: [
-      "500+ satisfied individual and corporate clients",
+      "Diverse portfolio of individual and corporate clients",
       "7+ years of sustained client retention and trust",
       "Multi-crore verified tax savings delivered",
       "Transparent reporting with clear performance metrics",
@@ -135,8 +135,8 @@ export default function WhatSetsUsApart() {
               <div className="text-xs text-gray-300 uppercase tracking-wider font-medium">Proven Track Record</div>
             </div>
             <div>
-              <div className="text-2xl md:text-3xl font-black text-gold-400 mb-1">500+</div>
-              <div className="text-xs text-gray-300 uppercase tracking-wider font-medium">Multiple Clients</div>
+              <div className="text-2xl md:text-3xl font-black text-gold-400 mb-1">Multi-Sector</div>
+              <div className="text-xs text-gray-300 uppercase tracking-wider font-medium">Diverse Client Base</div>
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-black text-gold-400 mb-1">98%</div>
