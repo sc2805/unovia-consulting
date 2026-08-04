@@ -4,6 +4,8 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import CTABanner from "@/components/sections/CTABanner";
 import { SERVICES } from "@/lib/constants";
 
+import WhatSetsUsApart from "@/components/sections/WhatSetsUsApart";
+
 // =============================================================================
 // Services Page — Overview of all 4 service categories
 // =============================================================================
@@ -58,48 +60,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-padding bg-gray-50/50">
-        <div className="container-tight">
-          <SectionHeading
-            eyebrow="Why Unovia"
-            title="What Sets Us Apart"
-            subtitle="Our approach combines deep domain expertise with personalized service to deliver measurable results."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Specialized Expertise",
-                desc: "Each practice is led by domain experts with 15+ years of hands-on experience in their respective fields.",
-                number: "01",
-              },
-              {
-                title: "Integrated Approach",
-                desc: "Our services don't operate in silos. Tax, wealth, GST, and business strategies are coordinated for maximum impact.",
-                number: "02",
-              },
-              {
-                title: "Proven Track Record",
-                desc: "500+ satisfied clients, 98% retention rate, and measurable outcomes that speak for themselves.",
-                number: "03",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="relative p-8 bg-white border border-gray-100 rounded-2xl hover:shadow-lg hover:border-gold-200 transition-all duration-300"
-              >
-                <span className="text-6xl font-black text-navy-50 absolute top-4 right-6">
-                  {item.number}
-                </span>
-                <h3 className="relative text-lg font-bold text-navy-800 mb-3 mt-8">
-                  {item.title}
-                </h3>
-                <p className="relative text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* What Sets Us Apart */}
+      <WhatSetsUsApart />
 
       <CTABanner />
     </>
